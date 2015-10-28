@@ -2,7 +2,7 @@
   <div metal:fill-slot="content">
     <div class="col-md-10">
       <form action="search">
-        <p>Select the age range and click the Search button <b class="value value-left"></b> <input id="ex2" type="text" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="[18,60]" name="age" /> <b class="value value-right"></b></p>
+        <p>Select the range of age and click the Search button <b class="value value-left"></b> <input id="ex2" type="text" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="[18,60]" name="age" /> <b class="value value-right"></b></p>
         
         <button type="submit" class="btn btn-primary">Search</button>
       </form>
