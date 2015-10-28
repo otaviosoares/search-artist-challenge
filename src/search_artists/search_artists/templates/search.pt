@@ -1,0 +1,32 @@
+<html metal:use-macro="load: master.pt">
+  <div metal:fill-slot="content">
+    <div class="col-md-12">
+
+      <a href="/">Back</a>
+
+      <ul class="nav nav-tabs" role="tablist" id="myTabs">
+        <li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">Artist List</a></li>
+        <li role="presentation"><a href="#raw" aria-controls="raw" role="tab" data-toggle="tab">Raw JSON</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="list">
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th>Age</th>
+              <th>UUID</th>
+            </tr>
+            <tr tal:repeat="row artists">
+              <td>${row.age}</td>
+              <td>${row.uuid}</td>
+            </tr>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="raw">
+          <pre>${artists_json}</pre>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</html>

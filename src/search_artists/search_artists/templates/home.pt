@@ -1,55 +1,11 @@
-<!DOCTYPE html>
-<html lang="${request.locale_name}">
-  <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta name="description" content="artists searcher web application">
-            <meta name="author" content="Otávio Augusto Soares">
-              <link rel="shortcut icon" href="${request.static_url('search_artists:static/pyramid-16x16.png')}">
-
-                <title>Artist Searcher</title>
-
-                <!-- Bootstrap core CSS -->
-                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-                  <!-- Custom styles for this scaffold -->
-                  <link href="${request.static_url('search_artists:static/theme.css')}" rel="stylesheet">
-                    <link href="${request.static_url('search_artists:static/bootstrap-slider.min.css')}" rel="stylesheet">
-
-                    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-      <![endif]-->
-    </head>
-
-    <body>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10">
-            <div class="content">
-              <h1><span class="font-semi-bold">Artist</span> <span class="smaller">Searcher</span></h1>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-10">
-            <p>Select the age range and click the Search button <b class="value value-left">${minAge}</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="${minAge}" data-slider-max="${maxAge}" data-slider-step="1" data-slider-value="[${minAge},${maxAge}]"/> <b class="value value-right">${maxAge}</b></p>
-            
-            <button class="btn btn-primary">Search</button>
-          </div>
-        </div>
-      </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="${request.static_url('search_artists:static/bootstrap-slider.min.js')}"></script>
-    <script>
-      var slider = new Slider('#ex2', {});
-    </script>
-  </body>
+<html metal:use-macro="load: master.pt">
+  <div metal:fill-slot="content">
+    <div class="col-md-10">
+      <form action="search">
+        <p>Select the age range and click the Search button <b class="value value-left"></b> <input id="ex2" type="text" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="[18,60]" name="age" /> <b class="value value-right"></b></p>
+        
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
 </html>
