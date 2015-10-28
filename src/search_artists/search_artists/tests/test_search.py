@@ -1,6 +1,6 @@
 import unittest
 from search_artists.searcher import ArtistSearcher
-from .mock import fake_data
+from .mock_data import fake_data
 
 
 class CreatingSearchTests(unittest.TestCase):
