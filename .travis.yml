@@ -3,4 +3,6 @@ python:
   - "2.7"
 
 install: "pip install pyramid==1.5.7"
-script: nosetests
+script: 
+    - cd src/search_artists
+    - nosetests
