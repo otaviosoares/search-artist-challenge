@@ -9,6 +9,9 @@ class Search():
         if minVal <= 0:
             raise ValueError('min value can not be equal or less than 0')
 
+        if maxVal < minVal:
+            raise ValueError('max value can not be greater min value')
+
         def filter_function(x):
             return x['age'] >= minVal and x['age'] <= maxVal
 
