@@ -49,5 +49,5 @@ Open [http://localhost:6543/](http://localhost:6543/) in browser
 nosetests --verbose
 
 #With coverage
-nosetests --with-coverage --cover-package=search_artist
+nosetests --with-coverage --cover-package=search_artists
 ```
