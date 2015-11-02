@@ -2,6 +2,10 @@
 [![Build Status](https://travis-ci.org/otaviosoares/search-artist-challenge.svg?branch=master)](https://travis-ci.org/otaviosoares/search-artist-challenge)
 > Searches for artists in a JSON and sorts by the middle ages
 
+## Choose of framework
+
+From all the frameworks I've worked with (Django, flash, tornado), Pyramid was not one of them. The reason I've chosen it is that it's in the job description that you use Pylons Project. The goal here, although I haven't used any advanced stuff, was to prove my best quality: I can learn fast. :)
+
 ## Prerequisites
 
 - [Git](https://git-scm.com/)
