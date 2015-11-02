@@ -5,4 +5,4 @@ python:
 install: "pip install pyramid==1.5.7"
 script: 
     - cd src/search_artists
-    - nosetests
+    - nosetests --verbose
