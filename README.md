@@ -9,7 +9,7 @@ From all the frameworks I've worked with (Django, flask, tornado), Pyramid was n
 ## Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Python](https://www.python.org/)
+- [Python 2.7](https://www.python.org/)
 - [VirtualEnv](https://github.com/pypa/virtualenv)
 
 ## Setup
