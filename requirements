@@ -18,7 +18,6 @@ pyramid-debugtoolbar==2.4.1
 pyramid-mako==1.0.2
 python-termstyle==0.1.10
 repoze.lru==0.6
-search-artists==0.0
 six==1.10.0
 sniffer==0.3.5
 translationstring==1.3
