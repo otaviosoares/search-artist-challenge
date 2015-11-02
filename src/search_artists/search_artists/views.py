@@ -5,6 +5,7 @@ from pyramid.path import AssetResolver
 
 from loader import ArtistLoader
 from searcher import ArtistSearcher
+from sorter import MedianSorter
 
 
 @view_config(route_name='home', renderer='templates/home.pt')
@@ -24,7 +25,7 @@ def search(request):
     artist_loader = ArtistLoader(json_path)
 
     searcher = ArtistSearcher(artist_loader.data['artists'])
-    results = searcher.search_by_age(minAge, maxAge)
+    results = searcher.search_by_age(minAge, maxAge, sorterKlass=MedianSorter)
 
     artists_json = json.dumps(results, indent=4)
 

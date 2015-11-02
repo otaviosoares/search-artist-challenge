@@ -7,6 +7,7 @@ from pyramid import testing
 from .mock_data import fake_data, fake_full_data
 from search_artists.searcher import ArtistSearcher
 from search_artists.loader import ArtistLoader
+from search_artists.sorter import MedianSorter
 
 
 class HomeViewTests(unittest.TestCase):
@@ -53,7 +54,7 @@ class SearchViewTests(unittest.TestCase):
 
         response = search(self.request)
 
-        searcher_mock.assert_called_with(10, 20)
+        searcher_mock.assert_called_with(10, 20, sorterKlass=MedianSorter)
 
     def test_response_dict(self):
         from search_artists.views import search
